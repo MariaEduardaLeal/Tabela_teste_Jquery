@@ -9,8 +9,9 @@ if (!$conexao) {
 $selecionar_produtos = "SELECT * FROM produtos";
 $query = mysqli_query($conexao, $selecionar_produtos);
 
+
 //Inicializa um array para armazenar os resultados
-$data = ($query ->num_rows > 0 ? gravarInformacoesNoArray($query) : "Não tem itens no banco");
+$data = ($query -> num_rows > 0 ? gravarInformacoesNoArray($query) : "Não tem itens no banco");
 
 function gravarInformacoesNoArray($query_do_select){
     $data = array();
